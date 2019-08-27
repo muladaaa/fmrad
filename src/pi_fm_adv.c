@@ -652,7 +652,7 @@ int main(int argc, char **argv) {
 	int pty = 15;
 	int tp = 1;
 	int divc = 0;
-	int power = 7;
+	int power = 99;
 	int gpio = 4;
 	float mpx = 40;
 	int wait = 1;
@@ -740,8 +740,8 @@ int main(int argc, char **argv) {
 
 			case 'w': //power
 				power = atoi(optarg);
-				if(power < 0 || power > 7)
-					fatal("Output power has to be set in range of 0 - 7\n");
+				if(power < 0 || power > 99)
+					fatal("Output power has to be set in range of 0 - 99\n");
 				break;
 
 			case 'g': //gpio
